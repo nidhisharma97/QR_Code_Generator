@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR Code Generator Online</title>
+
+</head>
+<body>
+    <style>
+        body{
+            display: grid;
+            height: 100%;
+            place-items: center;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'poppins', sans-serif;
+            background: rgb(7, 127, 143);
+        }
+        .container{
+            width: 450px;
+            padding: 20px 25px; 
+            background: papayawhip;
+            border-radius: 10px;
+            
+        }
+        .container #myinput{
+            font-size: 26px;
+            color: #ccc;
+            font-weight: 600;
+            line-height: 35px;
+            padding-bottom: 5px;
+            
+            border-radius: 10px;
+        }
+        header h1{
+            color: rgb(7, 127, 143);
+            padding: 10px;
+            margin-bottom: 10px;
+            margin-top: -10px;
+        }
+        .container #myinput, #btn{
+            height: 20px;
+            width: 100%;
+            display: flex;
+            position: relative;
+            outline: none;
+            background: ;
+            border: 1px solid rgb(7, 127, 143);
+            padding: 10px;
+            font-size: 17px;
+            color: rgb(7, 127, 143);
+            margin: 0px -10px;
+            border-radius: 10px;
+        }
+        #btn{
+            height: 45px;
+            display: block;
+            width: 80%;
+            margin-top: 15px;
+            outline: none;
+            background: rgb(133, 229, 241);
+            border: 1px solid rgb(7, 127, 143);
+            color: #999;
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            font-family: cursive;
+            border-radius: 10px;
+            top: 20px;
+            left: 53%;
+            transform: translate(-50%, -50%);
+        }
+        #btn:hover{
+            background: rgb(6, 131, 168);
+        }
+        #myinput:focus{
+            border-color: rgb(7, 127, 143);;
+            box-shadow: inset 0 0 8px rgb(7, 127, 143);
+            right: 2px;
+            top: 50%;
+        }
+        #btn:focus{
+            border-color: #08659b;;
+            box-shadow: inset 0 0 7px rgb(7, 127, 143);
+            color: black;
+            right: 2px;
+           
+        }
+        #yourid{
+            display: grid;
+            height: 100%;
+            place-items: center;
+            text-align: center;
+            position: relative;
+            bottom: -90px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'poppins', sans-serif;
+            margin-bottom: -20px;
+        }
+        .container #note{
+            font-size: 1rem;
+            font-family: cursive;
+            margin-bottom: -10px;
+        }
+    </style>
+  <div class="container">
+    <br>
+    <header><h1>QR Code Generator Online...</h1></header>
+    <br>
+  <input id="myinput" type="text" onchange="refreshqr()" placeholder="Enter Your QR Here">
+ <button id="btn" onclick="refreshqr()">GET QR</button>
+ <br><br>
+  <div id="yourid"></div><br>
+  <p id="note">Made By Nidhi Sharma</p>
+
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs@master/qrcode.js"></script>
+<script src = "QRcode.js"></script>
+
+</body>
+</html>
